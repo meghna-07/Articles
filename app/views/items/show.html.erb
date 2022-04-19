@@ -1,0 +1,26 @@
+<div id="page-content">
+	<div class="mt-0 text-center">
+      <%= link_to 'Back To Items', items_path, class: "btn btn-outline-primary text-dark" %>
+    </div>	  
+    <div class="row justify-content-md-center">
+		<div class="col-16">
+			<div class="card" style="width: 18rem;">
+                <%= image_tag @item.image, height: 250 %>
+				<div class="card-body">
+					<h5 class="card-title"><%= @item.title %></h5>
+						<p class="card-text"><%= @item.description %></p>
+				</div>
+				<ul class="list-group list-group-flush">
+					<li class="list-group-item">Price :<%= @item.stock.price %></li>
+					<li class="list-group-item">Quantity:<%= @item.stock.quantity %></li>
+				</ul>
+								  
+			</div>
+
+				<li class="card-header">Owned by:<%= link_to @item.user.email  %> </li>
+		</div>
+		</div>
+	</div>	
+					
+</div>
+

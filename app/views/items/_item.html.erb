@@ -1,0 +1,14 @@
+<div class="card-block top-buffer">
+  <div class="row ">
+      <% @items.each do |item| %>
+            <div class="card border-danger" style="width: 20rem;">
+              <%= image_tag item.image, height: 250 %>
+              <div class="card-body">
+                <h5 class="card-title"><%= link_to item.title, item_path(item), class: "text-success" %></h5>
+                <p class="card-text">{{item.description}}</p>
+              </div>
+            </div>
+      <% end %>
+  </div>
+</div>
+
